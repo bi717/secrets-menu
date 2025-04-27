@@ -54,6 +54,18 @@
   </style>
 </head>
 <body>
+<script>
+// 啟動密碼保護功能
+var password = prompt("請輸入密碼才能進入網站：");
+
+// 判斷輸入的密碼是否正確if (password !== "madebylove") { // <-- 這裡換成你想要的密碼
+  // 如果密碼錯誤，就把整個畫面變黑，顯示錯誤訊息
+  document.body.className = "locked"; 
+  document.body.innerHTML = "密碼錯誤！請重新整理頁面再試一次。";
+}
+// 如果密碼正確，網站就正常顯示，什麼都不用做
+</script>
+
 
 <h1>美麗媽的秘製食譜</h1>
 
