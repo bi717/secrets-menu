@@ -66,6 +66,9 @@
   <button onclick="filterRecipes('肉類')">肉類</button>
   <button onclick="filterRecipes('其他')">其他</button>
 </div>
+<!-- 搜尋欄 -->
+<input type="text" id="searchInput" placeholder="搜尋食譜..." oninput="searchRecipes()" style="margin-bottom: 20px; padding: 10px; border-radius: 8px; border: 1px solid #ccc; width: 100%; max-width: 400px;">
+
 
 <div id="recipes">
   <div class="recipe" data-category="家常菜 肉類">
@@ -136,6 +139,21 @@ function filterRecipes(category) {
     }
   }
 }
+  // 搜尋食譜功能
+function searchRecipes() {
+  const keyword = document.getElementById('searchInput').value.toLowerCase();
+  const recipes = document.querySelectorAll('.recipe');
+
+  recipes.forEach(recipe => {
+    const title = recipe.querySelector('h2').innerText.toLowerCase();
+    if (title.includes(keyword)) {
+      recipe.style.display = 'block';
+    } else {
+      recipe.style.display = 'none';
+    }
+  });
+}
+
 </script>
 
 </body>
