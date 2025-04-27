@@ -55,10 +55,6 @@
 </head>
 <body>
 <script>
-// 啟動密碼保護功能
-var password = prompt("請輸入密碼才能進入網站：");
-
-
 
 
 <h1>美麗媽的秘製食譜</h1>
